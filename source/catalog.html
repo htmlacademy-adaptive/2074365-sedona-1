@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>Отель Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="main-header">
-  <a class="main-header__link logo" href="index.html">
+  <a class="main-header__link logo link-reset" href="index.html">
     <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
   </a>
   <nav class="main-navigation">
     <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
     <div class="main-navigation__wrapper">
-      <ul class="main-navigation__list">
+      <ul class="main-navigation__list list-reset">
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-navigation__item main-navigation__item--current">
-          <a class="main-navigation__link" href="catalog.html">Фото и видео</a>
+          <a class="main-navigation__link link-reset" href="index.html">Главная</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="form.html">Форма отзыва</a>
+          <a class="main-navigation__link main-navigation__link--current link-reset" href="catalog.html">Фото и видео</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="https://htmlacademy.ru">HTML ACADEMY</a>
+          <a class="main-navigation__link link-reset" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link link-reset" href="https://htmlacademy.ru">HTML ACADEMY</a>
         </li>
       </ul>
     </div>
@@ -32,13 +33,16 @@
 <main class="main-container">
   <section class="photo-review">
     <div class="photo-review__wrapper hero-inner">
+      <div class="hero-inner__background-image">
+        <img class="hero-inner__image" src="img/text-sedona.svg" width="229" height="39" alt="Седона.">
+      </div>
       <h1 class="hero-inner__title">Фото и видео</h1>
       <p class="hero-inner__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     </div>
   </section>
   <section class="catalog">
     <h2 class="visually-hidden">Каталог фотографий и видео.</h2>
-    <ul class="catalog__list">
+    <ul class="catalog__list list-reset">
       <li class="catalog__item card">
         <img class="card__image" src="img/people-spaces.jpg" width="280" height="280" alt="Неродные просторы.">
         <div class="card__content">
@@ -102,25 +106,25 @@
 <footer class="main-footer">
   <div class="main-footer__wrapper">
     <div class="main-footer__visit visit">
-      <a class="visit__link" href="#">#VISITSEDONA</a>
+      <a class="visit__link link-reset" href="#">#VISITSEDONA</a>
     </div>
     <div class="main-footer__social social">
-      <ul class="social__list">
+      <ul class="social__list list-reset">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span>></a>
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте.</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме.</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе.</span></a>
         </li>
       </ul>
     </div>
     <div class="main-footer__developed developed">
       <p class="developed__title">Разработано</p>
       <span class="visually-hidden">Разработано в HTML Academy.</span>
-      <img class="developed__logo" src="img/html-academy-logo.svg" width="27" height="35" alt="Логотип Html Academy">
+      <img class="developed__logo" src="img/html-academy-logo.svg" width="27" height="35" alt="Логотип Html Academy.">
     </div>
   </div>
 </footer>
