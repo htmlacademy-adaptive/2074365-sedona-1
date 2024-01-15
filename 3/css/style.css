@@ -1,0 +1,307 @@
+.variables {
+  outline-color: transparent;
+}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.link-reset {
+  color: #000000;
+  text-decoration: none;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("source/fonts/ptsans.woff") format("woff");
+  src: url("source/fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("source/fonts/ptsansbold.woff") format("woff");
+  src: url("source/fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+html {
+  height: 100%;
+}
+.page {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+.page__body {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+  min-height: 100%;
+}
+.page__body p {
+  margin: 0;
+  color: #333333;
+  text-transform: uppercase;
+}
+.button {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+  background-color: #81b3d2;
+  border: none;
+  text-transform: uppercase;
+}
+.main-header {
+  display: flex;
+  background-color: #ffffff;
+}
+.main-navigation__link {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main-navigation__link--current {
+  color: #766357;
+}
+.logo {
+  outline-color: transparent;
+}
+.main-navigation {
+  outline-color: transparent;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+.intro__background-image {
+  min-width: 1200px;
+  min-height: 518px;
+  background-color: #dceaf3;
+  background-image: url("../../../img/hero-background.jpg");
+  background-repeat: no-repeat;
+}
+.intro__background-image::after {
+  display: flex;
+  position: relative;
+  content: "";
+  min-width: 100%;
+  min-height: 57px;
+  background-color: transparent;
+  background-image: url("../../../img/divider.svg");
+  background-repeat: no-repeat;
+}
+.hero-inner__background-image {
+  min-width: 1200px;
+  min-height: 518px;
+  background-color: #dceaf3;
+  background-image: url("../../../img/hero-background.jpg");
+  background-repeat: no-repeat;
+}
+.hero-inner__background-image::after {
+  display: flex;
+  position: relative;
+  content: "";
+  min-width: 100%;
+  min-height: 57px;
+  background-color: transparent;
+  background-image: url("../../../img/divider.svg");
+  background-repeat: no-repeat;
+}
+.hero-inner__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.main-footer {
+  display: flex;
+  background-color: #ffffff;
+}
+.social__list {
+  display: flex;
+  gap: 6px;
+}
+.social__item {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  background-color: #81b3d2;
+}
+.social__link {
+  display: flex;
+  padding: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.social__link--vkontakte {
+  background-image: url("../../../img/vk-icon.svg");
+}
+.social__link--telegram {
+  background-image: url("../../../img/telegram-icon.svg");
+}
+.social__link--youtube {
+  background-image: url("../../../img/youtube-icon.svg");
+}
+.developed p {
+  color: #000000;
+}
+.visit {
+  outline-color: transparent;
+}
+.social {
+  outline-color: transparent;
+}
+.developed {
+  outline-color: transparent;
+}
+.intro__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.advantages__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.advantages__sub-item--background-blue {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.advantages__sub-item--background-blue p {
+  color: #ffffff;
+}
+.advantages__item--background-gray {
+  background-color: #eeeeee;
+}
+.search-hotel__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.search-hotel__link {
+  display: flex;
+  width: 458px;
+  height: 58px;
+  justify-content: center;
+  align-items: center;
+}
+.position-on-map {
+  outline-color: transparent;
+}
+.feedback {
+  outline-color: transparent;
+}
+.feedback-form {
+  outline-color: transparent;
+}
+.main-form__legend {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+.main-form__control + .main-form__title {
+  color: #333333;
+  text-transform: uppercase;
+}
+.main-form__control::placeholder {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.main-form__control--left::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.main-form__radio + .main-form__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.main-form__checkbox + .main-form__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.main-form__control--textarea {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.main-form__control--textarea::placeholder {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.main-form__button {
+  display: flex;
+  width: 384px;
+  height: 58px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.photo-review {
+  outline-color: transparent;
+}
+.catalog {
+  outline-color: transparent;
+}
+.card__content {
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0.3;
+}
+.card__content p {
+  color: #ffffff;
+}
+.card__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.card__image {
+  display: flex;
+}
+.video__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
