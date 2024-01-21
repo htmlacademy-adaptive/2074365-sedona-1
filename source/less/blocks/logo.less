@@ -1,4 +1,10 @@
-// Пока заглушка для Линтера что бы не было ошибок на пустой less
-.logo {
-  outline-color: transparent;
+.logo__image {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
