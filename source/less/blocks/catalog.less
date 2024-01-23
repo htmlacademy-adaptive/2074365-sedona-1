@@ -1,4 +1,30 @@
-// Пока заглушка для Линтера что бы не было ошибок на пустой less
-.catalog {
-  outline-color: transparent;
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__item {
+  width: 280px;
+  height: 343px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 330px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 400px;
+    height: 330px;
+  }
+}
+
+.catalog__item-top {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }

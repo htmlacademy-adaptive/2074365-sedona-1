@@ -1,9 +1,34 @@
 .card__content {
-  color: #ffffff;
-  background-color: #000000;
-  opacity: 0.3;
+  color: #000000;
+  background-color: #ffffff;
 
   p {
+    color: #333333;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    p {
+      color: #ffffff;
+    }
+  }
+}
+
+.card__icon-like .card__count-like {
+  color: #000000;
+
+  @media (min-width: @desktop-width) {
     color: #ffffff;
   }
 }
@@ -21,4 +46,30 @@
 
 .card__image {
   display: flex;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 267px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    height: 330px;
+  }
+}
+
+.card__image-top {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 267px;
+    object-fit: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 330px;
+  }
 }

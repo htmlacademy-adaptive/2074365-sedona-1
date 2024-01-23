@@ -1,7 +1,32 @@
+.video__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .video__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.video__image {
+  width: 280px;
+  height: 177px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    height: 500px;
+  }
 }

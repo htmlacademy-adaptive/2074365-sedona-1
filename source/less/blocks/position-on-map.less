@@ -1,4 +1,12 @@
-// Пока заглушка для Линтера что бы не было ошибок на пустой less
-.position-on-map {
-  outline-color: transparent;
+.position-on-map__image-map {
+  width: 320px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }

@@ -1,19 +1,29 @@
-.page {
-  font-family: "PT Sans", "Arial", sans-serif;
+.body {
+  font-family: @base-font-family;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+  height: 100%;
+  margin: 0;
 }
 
-.page__body {
+.body__wrapper {
   display: flex;
-  max-width: 320px;
-  margin: 0 auto;
   flex-direction: column;
+  width: 320px;
   min-height: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 
   p {
     margin: 0;

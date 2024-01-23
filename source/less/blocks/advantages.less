@@ -1,9 +1,42 @@
-.advantages__title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin: 0;
+.advantages__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: @tablet-width;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.advantages__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__sub-item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 256px;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
+}
+
+.advantages__sub-item--image {
+  @media (min-width: @tablet-width) {
+    width: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .advantages__sub-item--background-blue {
@@ -21,8 +54,59 @@
   background-image: url("../img/divider-advantages.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .advantages__item--background-gray {
   background-color: #eeeeee;
+}
+
+.advantages__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.advantages__real-city,
+.advantages__bridge {
+  width: 320px;
+  height: 256px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+}
+
+.advantages__sub-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.advantages__sub-list-item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
 }
