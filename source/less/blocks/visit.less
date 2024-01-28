@@ -1,6 +1,13 @@
 .visit__link {
+  max-width: 140px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 12px;
+  }
 }

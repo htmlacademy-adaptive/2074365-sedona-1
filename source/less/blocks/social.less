@@ -1,13 +1,27 @@
 .social__list {
   display: flex;
+  width: 156px;
+  flex-wrap: wrap;
+  padding-top: 29px;
+  padding-bottom: 30px;
   gap: 6px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .social__item {
   display: flex;
   width: 48px;
-  height: 48px;
-  justify-content: center;
+  min-height: 48px;
+  flex-wrap: wrap;
+  justify-content: start;
   align-items: center;
   background-color: #81b3d2;
 }

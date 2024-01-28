@@ -10,9 +10,9 @@
 <div class="body__wrapper">
   <header class="main-header">
     <a class="main-header__link logo link-reset" href="index.html">
-      <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
+      <img class="logo__image logo__image--no-js" src="img/logo.svg" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
     </a>
-    <nav class="main-navigation">
+    <nav class="main-navigation main-navigation--no-js main-navigation--closed">
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
       <div class="main-navigation__wrapper">
         <ul class="main-navigation__list list-reset">
@@ -20,10 +20,7 @@
             <a class="main-navigation__link link-reset" href="index.html">Главная</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--current link-reset" href="catalog.html">Фото ивидео</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item-center">
-            <span class="visually-hidden">Логотип.</span>
+            <a class="main-navigation__link main-navigation__link--current link-reset" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link link-reset" href="form.html">Форма отзыва</a>
@@ -39,54 +36,116 @@
     <section class="photo-review">
       <div class="photo-review__wrapper hero-inner">
         <div class="hero-inner__background-image"><img class="hero-inner__image" src="img/text-sedona.svg" width="229" height="39" alt="Седона."></div>
-        <h1 class="hero-inner__title">Фото и видео</h1>
-        <p class="hero-inner__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <div class="hero-inner__text">
+          <h1 class="hero-inner__title">Фото и видео</h1>
+          <p class="hero-inner__description">Не можете решиться на путешествие из-за курса?<br class="hero-inner__description-br"> Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
       </div>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог фотографий и видео.</h2>
       <ul class="catalog__list list-reset">
         <li class="catalog__item catalog__item-top card">
-          <img class="card__image card__image-top" src="img/people-spaces.jpg" width="1200" height="400" alt="Неродные просторы.">
-          <div class="card__content">
-            <h3 class="card__title">Неродные просторы</h3>
-            <p class="card__description">Автор фото: Борис</p>
-            <div class="card__icon-like">
-              <p class="card__count-like">1350</p>
-              <span class="visually-hidden">Количество лайков.</span>
+          <div class="catalog__item-wrapper">
+            <img class="card__image card__image-top" src="img/people-spaces.jpg" width="1200" height="400" alt="Неродные просторы.">
+            <div class="card__content">
+              <div class="card__content-wrapper card__content-top-wrapper">
+                <div class="card__text card__text-top">
+                  <h3 class="card__title card__title-top">Неродные просторы</h3>
+                  <p class="card__description card__description-top">Автор фото: Борис</p>
+                </div>
+                <div class="card__icon-like card__icon-like-top">
+                  <div class="card__icon-wrapper">
+                    <span class="card__icon">
+                      <svg class="card__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">1350</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
             </div>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__image" src="img/local-vegetation.jpg" width="280" height="280" alt="Местная растительность.">
-          <div class="card__content">
-            <h3 class="card__title">Местная растительность</h3>
-            <p class="card__description">Автор фото: Сергей</p>
-            <div class="card__icon-like">
-              <p class="card__count-like">143</p>
-              <span class="visually-hidden">Количество лайков.</span>
+          <div class="catalog__item-wrapper">
+            <img class="card__image" src="img/local-vegetation.jpg" width="280" height="280" alt="Местная растительность.">
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text">
+                  <h3 class="card__title">Местная растительность</h3>
+                  <p class="card__description">Автор фото: Сергей</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__icon-wrapper">
+                    <span class="card__icon">
+                      <svg class="card__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">143</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
             </div>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__image" src="img/northern-road.jpg" width="280" height="280" alt="Дорога на север.">
-          <div class="card__content">
-            <h3 class="card__title">Дорога на север</h3>
-            <p class="card__description">Автор фото: Петр</p>
-            <div class="card__icon-like">
-              <p class="card__count-like">96</p>
-              <span class="visually-hidden">Количество лайков.</span>
+          <div class="catalog__item-wrapper">
+            <img class="card__image" src="img/northern-road.jpg" width="280" height="280" alt="Дорога на север.">
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text">
+                  <h3 class="card__title">Дорога на север</h3>
+                  <p class="card__description">Автор фото: Петр</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__icon-wrapper">
+                    <span class="card__icon">
+                      <svg class="card__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">96</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
             </div>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__image" src="img/devil-bridge.jpg" width="280" height="280" alt="Мост дьявола.">
-          <div class="card__content">
-            <h3 class="card__title">Мост дьявола</h3>
-            <p class="card__description">Автор фото: Антон</p>
-            <div class="card__icon-like">
-              <p class="card__count-like">254</p>
-              <span class="visually-hidden">Количество лайков.</span>
+          <div class="catalog__item-wrapper">
+            <img class="card__image" src="img/devil-bridge.jpg" width="280" height="280" alt="Мост дьявола.">
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text">
+                  <h3 class="card__title">Мост дьявола</h3>
+                  <p class="card__description">Автор фото: Антон</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__icon-wrapper">
+                    <span class="card__icon">
+                      <svg class="card__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">254</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
             </div>
           </div>
         </li>
@@ -101,13 +160,18 @@
         </div>
         <div class="video__content">
           <img class="video__image" src="img/presentation-video.jpg" width="800" height="500" alt="Видеопрезентация Седоны.">
-          <button class="video__button video__button--icon-play" type="button"><span class="visually-hidden">Посмотреть видео.</span></button>
+          <button class="video__button video__button--icon-play" type="button">
+            <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7"/>
+            </svg>
+            <span class="visually-hidden">Посмотреть видео.</span>
+          </button>
         </div>
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper main-footer__catalog-wrapper">
       <div class="main-footer__visit visit">
         <a class="visit__link link-reset" href="#">#VISITSEDONA</a>
       </div>
@@ -127,10 +191,13 @@
       <div class="main-footer__developed developed">
         <p class="developed__title">Разработано</p>
         <span class="visually-hidden">Разработано в HTML Academy.</span>
-        <img class="developed__logo" src="img/html-academy-logo.svg" width="27" height="35" alt="Логотип Html Academy.">
+        <div class="developed__logo-wrapper">
+          <img class="developed__logo" src="img/html-academy-logo.svg" width="27" height="35" alt="Логотип Html Academy.">
+        </div>
       </div>
     </div>
   </footer>
 </div>
+<script src="js/mobile-menu.js"></script>
 </body>
 </html>
