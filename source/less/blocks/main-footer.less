@@ -5,9 +5,45 @@
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 35px 82px 33px 82px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-around;
+    padding: 29px 3px 33px 4px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 29px 0 33px 0;
+  }
+}
+
+.main-footer__catalog-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-top: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 119px;
+  }
+}
+
+.main-footer__developed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 130px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+  }
+}
+
+.main-footer__visit {
+  text-align: center;
 }
