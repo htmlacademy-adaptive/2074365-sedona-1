@@ -1,14 +1,16 @@
-let navMain = document.querySelector('.main-navigation');
-let navToggle = document.querySelector('.main-navigation__toggle');
+let logoImageElement = document.querySelector('.logo__image');
+let mainNavigationClass = document.querySelector('.main-navigation');
+let mainNavigationToggleElement = document.querySelector('.main-navigation__toggle');
 
-navMain.classList.remove('main-navigation--no-js');
+logoImageElement.classList.remove('logo__image--no-js');
+mainNavigationClass.classList.remove('main-navigation--no-js');
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-navigation--closed')) {
-    navMain.classList.remove('main-navigation--closed');
-    navMain.classList.add('main-navigation--opened');
+mainNavigationToggleElement.addEventListener('click', function () {
+  if (mainNavigationClass.classList.contains('main-navigation--closed')) {
+    mainNavigationClass.classList.remove('main-navigation--closed');
+    mainNavigationClass.classList.add('main-navigation--opened');
   } else {
-    navMain.classList.add('main-navigation--closed');
-    navMain.classList.remove('main-navigation--opened');
+    mainNavigationClass.classList.add('main-navigation--closed');
+    mainNavigationClass.classList.remove('main-navigation--opened');
   }
 });

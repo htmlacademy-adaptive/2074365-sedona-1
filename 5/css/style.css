@@ -63,6 +63,7 @@ html {
 @media (min-width: 1200px) {
   .body__wrapper {
     width: 1200px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   }
 }
 .main-header {
@@ -84,6 +85,11 @@ html {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .logo__image--no-js.logo__image {
+    display: none;
+  }
 }
 .main-navigation__toggle {
   position: absolute;
@@ -212,8 +218,13 @@ html {
     color: #766357;
   }
 }
-.main-navigation--no-js .main-navigation__wrapper {
-  display: block;
+@media (max-width: 767px) {
+  .main-navigation--no-js .main-navigation__wrapper {
+    display: block;
+  }
+  .main-navigation--no-js .main-navigation__list {
+    position: static;
+  }
 }
 .main-container {
   display: flex;
@@ -1557,14 +1568,15 @@ html {
 .card__icon {
   width: 23px;
   height: 21px;
-  background-image: url("../img/like-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+.card__like-icon {
+  fill: #000000;
+  opacity: 0.3;
 }
 @media (min-width: 1200px) {
-  .card__icon {
-    background-image: url("../img/like-icon-white.svg");
+  .card__like-icon {
+    fill: #ffffff;
+    opacity: 1;
   }
 }
 .video__wrapper {
@@ -1645,11 +1657,23 @@ html {
 }
 .video__button {
   position: absolute;
-  top: 63px;
-  left: 120px;
+  top: 61px;
+  left: 110px;
   width: 48px;
   height: 48px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .video__button {
+    top: 222px;
+    left: 294px;
+  }
+}
+@media (min-width: 1200px) {
+  .video__button {
+    left: 369px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
