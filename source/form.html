@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Отель Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon@180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
@@ -37,9 +42,13 @@
       <h1 class="visually-hidden">Оставьте свой отзыв.</h1>
       <div class="feedback__wrapper hero-inner">
         <div class="hero-inner__background-image">
-          <img class="hero-inner__image" src="img/text-sedona.svg" width="229" height="39" alt="Седона.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/text-sedona-desktop.svg" width="460" height="80">
+            <source media="(min-width: 768px)" srcset="img/text-sedona.svg" width="457" height="78">
+            <img class="hero-inner__image" src="img/text-sedona.svg" width="229" height="39" alt="Седона.">
+          </picture>
         </div>
-        <h2 class="hero-inner__title">Оставьте свой отзыв</h2>
+        <h2 class="hero-inner__title hero-inner__title-feedback">Оставьте свой отзыв</h2>
         <p class="hero-inner__description hero-inner__description-form">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="hero-inner__description-br"> а также о посещенных вами достопримечательностях</p>
       </div>
     </section>
@@ -47,13 +56,13 @@
       <h2 class="visually-hidden">Форма обратной связи.</h2>
       <div class="feedback-form__wrapper">
         <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="main-form__fieldset-wrapper">
-            <fieldset class="main-form__fieldset">
+          <div class="main-form__fieldset-wrapper main-form__fieldset-data-person">
+            <fieldset class="main-form__fieldset main-form__fieldset-person">
               <legend class="main-form__legend">Представьтесь:</legend>
               <ul class="main-form__list list-reset">
                 <li class="main-form__item">
                   <label class="main-form__label main-form__label-input">
-                    <input class="main-form__control" type="text" name="first-name" placeholder="Петр" required>
+                    <input class="main-form__control" type="text" name="first-name" placeholder="Пётр" required>
                     <span class="main-form__title">Имя*:</span>
                   </label>
                 </li>
@@ -73,18 +82,20 @@
             </fieldset>
           </div>
           <div class="main-form__fieldset-wrapper main-form__fieldset-contact-info">
-            <fieldset class="main-form__fieldset">
-              <legend class="main-form__legend">Контактная информация:</legend>
+            <fieldset class="main-form__fieldset main-form__fieldset-info">
+              <legend class="main-form__legend main-form__legend-info">Контактная информация:</legend>
               <ul class="main-form__list list-reset">
                 <li class="main-form__item">
                   <label class="main-form__label main-form__label-input">
                     <input class="main-form__control main-form__control--left" type="tel" name="telephone-number" placeholder="Введите телефон" required>
+                    <span class="main-form__telephone-icon"></span>
                     <span class="main-form__title">Контактный телефон*:</span>
                   </label>
                 </li>
                 <li class="main-form__item">
                   <label class="main-form__label main-form__label-input">
                     <input class="main-form__control main-form__control--left" type="email" name="email" placeholder="Введите e-mail" required>
+                    <span class="main-form__email-icon"></span>
                     <span class="main-form__title">Электронная почта*:</span>
                   </label>
                 </li>
@@ -92,81 +103,92 @@
             </fieldset>
           </div>
           <div class="main-form__fieldset-wrapper main-form__fieldset-double">
-            <fieldset class="main-form__fieldset">
+            <fieldset class="main-form__fieldset main-form__fieldset-emotions">
               <legend class="main-form__legend main-form__legend-common-line">Ваше общее впечатление:</legend>
-              <ul class="main-form__list list-reset">
+              <ul class="main-form__list main-form__list-emotions list-reset">
                 <li class="main-form__item">
                   <label class="main-form__label">
-                    <input class="main-form__radio" type="radio" name="main-form-radio" value="positive" checked>
-                    <span class="main-form__title">Скорее положительное</span>
+                    <input class="visually-hidden main-form__radio" type="radio" name="main-form-radio" value="positive" checked>
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-radio">Скорее положительное</span>
                   </label>
                 </li>
                 <li class="main-form__item">
                   <label class="main-form__label">
-                    <input class="main-form__radio" type="radio" name="main-form-radio" value="negative">
-                    <span class="main-form__title">Скорее отрицательное</span>
+                    <input class="visually-hidden main-form__radio" type="radio" name="main-form-radio" value="negative">
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-radio">Скорее отрицательное</span>
                   </label>
                 </li>
                 <li class="main-form__item">
                   <label class="main-form__label">
-                    <input class="main-form__radio" type="radio" name="main-form-radio" value="neutral">
-                    <span class="main-form__title">Затрудняюсь ответить</span>
+                    <input class="visually-hidden main-form__radio" type="radio" name="main-form-radio" value="neutral">
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-radio">Затрудняюсь ответить</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="main-form__fieldset-wrapper main-form__fieldset-double">
-            <fieldset class="main-form__fieldset">
-              <legend class="main-form__legend main-form__legend-line-attractions">Посещенные<br> достопримечательности:</legend>
-              <ul class="main-form__list list-reset">
+            <fieldset class="main-form__fieldset main-form__fieldset-attractions">
+              <legend class="main-form__legend main-form__legend-line-attractions">Посещенные достопримечательности:</legend>
+              <ul class="main-form__list main-form__list-attractions list-reset">
                 <li class="main-form__item">
                   <label class="main-form__label">
-                    <input class="main-form__checkbox" type="checkbox" name="main-form-devil-bridge" value="devil-bridge" checked>
-                    <span class="main-form__title">Мост Дьявола</span>
+                    <input class="visually-hidden main-form__checkbox" type="checkbox" name="main-form-devil-bridge" value="devil-bridge" checked>
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-checkbox">Мост Дьявола</span>
                   </label>
                 </li>
                 <li class="main-form__list">
                   <label class="main-form__label">
-                    <input class="main-form__checkbox" type="checkbox" name="main-form-mountain" value="bell-mountain" checked>
-                    <span class="main-form__title">Гора-Колокол</span>
+                    <input class="visually-hidden main-form__checkbox" type="checkbox" name="main-form-mountain" value="bell-mountain" checked>
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-checkbox">Гора-Колокол</span>
                   </label>
                 </li>
                 <li class="main-form__list">
                   <label class="main-form__label">
-                    <input class="main-form__checkbox" type="checkbox" name="main-form-slide-park" value="slide-park" checked>
-                    <span class="main-form__title">Слайд-парк</span>
+                    <input class="visually-hidden main-form__checkbox" type="checkbox" name="main-form-slide-park" value="slide-park" checked>
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-checkbox">Слайд-парк</span>
                   </label>
                 </li>
                 <li class="main-form__list">
                   <label class="main-form__label">
-                    <input class="main-form__checkbox" type="checkbox" name="main-form-red-rocks" value="red-rocks">
-                    <span class="main-form__title">Красные скалы</span>
+                    <input class="visually-hidden main-form__checkbox" type="checkbox" name="main-form-red-rocks" value="red-rocks">
+                    <span class="main-form__control-mark"></span>
+                    <span class="main-form__title main-form__title-checkbox">Красные скалы</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="main-form__fieldset-wrapper main-form__fieldset-double">
-            <fieldset class="main-form__fieldset">
-              <legend class="main-form__legend main-form__legend-common-line">Опишите свои эмоции:</legend>
+            <fieldset class="main-form__fieldset main-form__fieldset-describe-emotions">
+              <legend class="main-form__legend main-form__legend-describe-emotions">Опишите свои эмоции:</legend>
               <div class="main-form__wrapper">
-                <label class="main-form__label">
+                <label class="main-form__label main-form__label-textarea">
                   <textarea class="main-form__control main-form__control--textarea" name="main-form-textarea" placeholder="Опишите подробно все свои восторги"></textarea>
                 </label>
               </div>
             </fieldset>
           </div>
           <div class="main-form__wrapper-button main-form__fieldset-double">
-            <button class="main-form__button button" type="submit">Отправить отзыв</button>
-            <p class="main-form__required-fields">*-обязательные поля</p>
+            <div class="main-form__button-wrapper">
+              <button class="main-form__button button" type="submit">Отправить отзыв</button>
+            </div>
+            <div class="main-form__required-fields-wrapper">
+              <p class="main-form__required-fields">* &mdash; обязательные поля</p>
+            </div>
           </div>
         </form>
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper main-footer__form-wrapper">
       <div class="main-footer__visit visit">
         <a class="visit__link link-reset" href="#">#VISITSEDONA</a>
       </div>
