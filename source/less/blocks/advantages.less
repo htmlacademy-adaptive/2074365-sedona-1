@@ -130,6 +130,14 @@
   }
 }
 
+.advantages__title-food {
+  padding-right: 2px;
+}
+
+.advantages__description-food {
+  padding-right: 2px;
+}
+
 .advantages__number {
   margin: 0;
   color: #333333;
@@ -166,11 +174,25 @@
   }
 }
 
+.advantages__description-souvenir {
+  @media (min-width: @tablet-width) {
+    padding-right: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 2px;
+  }
+}
+
 .advantages__description-city {
   padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 1px;
   }
 }
 
@@ -188,6 +210,7 @@
 
   @media (min-width: @desktop-width) {
     width: 800px;
+    height: 256px;
   }
 }
 
@@ -243,9 +266,15 @@
   background-size: contain;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 1px;
+    right: -2px;
     width: 80px;
     height: 71px;
-    padding-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -1px;
   }
 }
 
@@ -257,9 +286,17 @@
   background-size: contain;
 
   @media (min-width: @tablet-width) {
-    width: 77px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 78px;
     height: 73px;
-    padding-bottom: 24px;
+    transform: scaleY(0.95);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -2px;
+    right: 1px;
   }
 }
 
@@ -272,13 +309,18 @@
   transform: scaleX(0.8);
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 3px;
+    right: -4px;
     width: 78px;
     height: 76px;
-    padding-bottom: 18px;
+    transform: scaleX(0.85);
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 25px;
+    top: -3px;
+    right: 1px;
+    transform: scaleX(1);
   }
 }
 
@@ -310,7 +352,34 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    position: relative;
     width: 75px;
+    padding-bottom: 99px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 99px;
+  }
+}
+
+.advantages__wrapper-icon-food {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 98px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 96px;
+  }
+}
+
+.advantages__wrapper-icon-souvenir {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 100px;
   }
 }
 
@@ -325,6 +394,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 54px;
+    padding-right: 3px;
   }
 }
 
@@ -333,6 +403,10 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 2px;
   }
 }
 
@@ -368,11 +442,15 @@
 }
 
 .advantages__description-road {
-  padding: 0 12px 0 10px;
+  padding: 0 23px 0 20px;
   line-height: 22px;
 
-  @media (max-width: @display-mobile-max) {
-    padding: 0 23px 0 20px;
+  @media (min-width: @tablet-width) {
+    padding: 0 12px 0 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 13px 0 9px;
   }
 }
 
