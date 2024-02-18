@@ -6,8 +6,21 @@
   text-transform: uppercase;
   word-break: break-word;
 
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+
   @media (min-width: @tablet-width) {
     display: block;
     padding-top: 12px;
+    padding-left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 12px;
   }
 }

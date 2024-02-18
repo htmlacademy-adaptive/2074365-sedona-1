@@ -8,3 +8,27 @@
   border: none;
   text-transform: uppercase;
 }
+
+.button__error-modal {
+  display: flex;
+  width: 53px;
+  justify-content: center;
+}
+
+.button__success-modal {
+  display: flex;
+  width: 158px;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: 179px;
+  }
+}
+
+.button__text-modal {
+  word-break: break-word;
+
+  @media (max-width: @display-mobile-max) {
+    font-size: 18px;
+  }
+}
