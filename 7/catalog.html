@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отель Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon@180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/2074365-sedona-1/7/">
+</head>
+<body class="body">
+<div class="body__wrapper">
+  <header class="main-header">
+    <a class="main-header__link logo link-reset" href="index.html">
+      <img class="logo__image logo__image--no-js" src="img/sprite.svg#logo" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
+    </a>
+    <nav class="main-navigation main-navigation--no-js main-navigation--closed">
+      <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list list-reset">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link link-reset" href="index.html">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--current link-reset" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link link-reset" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link link-reset" href="https://htmlacademy.ru">HTML ACADEMY</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <section class="photo-review">
+      <div class="photo-review__wrapper hero-inner">
+        <div class="hero-inner__background-image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/sprite.svg#text-sedona-desktop" width="460" height="80">
+            <source media="(min-width: 768px)" srcset="img/sprite.svg#text-sedona" width="457" height="78">
+            <img class="hero-inner__image" src="img/sprite.svg#text-sedona" width="229" height="39" alt="Седона.">
+          </picture>
+        </div>
+        <div class="hero-inner__text">
+          <h1 class="hero-inner__title">Фото и видео</h1>
+          <p class="hero-inner__description">Не можете решиться на путешествие из-за курса?<br class="hero-inner__description-br"> Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог фотографий и видео.</h2>
+      <ul class="catalog__list list-reset">
+        <li class="catalog__item catalog__item-top card">
+          <div class="catalog__item-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/people-spaces-desktop@1x.webp 1x, img/people-spaces-desktop@2x.webp 2x" width="1200" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/people-spaces-tablet@1x.webp 1x, img/people-spaces-tablet@2x.webp 2x" width="648" height="400">
+              <source type="image/webp" srcset="img/people-spaces-mobile@1x.webp 1x, img/people-spaces-mobile@2x.webp 2x" width="280" height="280">
+              <source media="(min-width: 1200px)" srcset="img/people-spaces-desktop@1x.jpg 1x, img/people-spaces-desktop@2x.jpg 2x" width="1200" height="400">
+              <source media="(min-width: 768px)" srcset="img/people-spaces-tablet@1x.jpg 1x, img/people-spaces-tablet@2x.jpg 2x" width="648" height="400">
+              <img class="card__image card__image-top" src="img/people-spaces-mobile@1x.jpg" srcset="img/people-spaces-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы.">
+            </picture>
+            <div class="card__content">
+              <div class="card__content-wrapper card__content-top-wrapper">
+                <div class="card__text card__text-top">
+                  <h3 class="card__title card__title-top">Неродные просторы</h3>
+                  <p class="card__description card__description-top">Автор фото: Борис</p>
+                </div>
+                <div class="card__icon-like card__icon-like-top">
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">1350</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item card">
+          <div class="catalog__item-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/local-vegetation-desktop@1x.webp 1x, img/local-vegetation-desktop@2x.webp 2x" width="1200" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/local-vegetation-tablet@1x.webp 1x, img/local-vegetation-tablet@2x.webp 2x" width="324" height="267">
+              <source type="image/webp" srcset="img/local-vegetation-mobile@1x.webp 1x, img/local-vegetation-mobile@2x.webp 2x" width="280" height="280">
+              <source media="(min-width: 1200px)" srcset="img/local-vegetation-desktop@1x.jpg 1x, img/local-vegetation-desktop@2x.jpg 2x" width="1200" height="400">
+              <source media="(min-width: 768px)" srcset="img/local-vegetation-tablet@1x.jpg 1x, img/local-vegetation-tablet@2x.jpg 2x" width="324" height="267">
+              <img class="card__image" src="img/local-vegetation-mobile@1x.jpg" srcset="img/local-vegetation-mobile@2x.jpg 2x" width="280" height="280" alt="Местная растительность.">
+            </picture>
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text">
+                  <h3 class="card__title">Местная растительность</h3>
+                  <p class="card__description">Автор фото: Сергей</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">143</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item card">
+          <div class="catalog__item-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/northern-road-desktop@1x.webp 1x, img/northern-road-desktop@2x.webp 2x" width="1200" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/northern-road-tablet@1x.webp 1x, img/northern-road-tablet@2x.webp 2x" width="324" height="267">
+              <source type="image/webp" srcset="img/northern-road-mobile@1x.webp 1x, img/northern-road-mobile@2x.webp 2x" width="280" height="280">
+              <source media="(min-width: 1200px)" srcset="img/northern-road-desktop@1x.jpg 1x, img/northern-road-desktop@2x.jpg 2x" width="1200" height="400">
+              <source media="(min-width: 768px)" srcset="img/northern-road-tablet@1x.jpg 1x, img/northern-road-tablet@2x.jpg 2x" width="324" height="267">
+              <img class="card__image" src="img/northern-road-mobile@1x.jpg" srcset="img/northern-road-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на север.">
+            </picture>
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text card__text-north-road">
+                  <h3 class="card__title">Дорога на север</h3>
+                  <p class="card__description">Автор фото: Петр</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">96</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item card">
+          <div class="catalog__item-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/devil-bridge-desktop@1x.webp 1x, img/devil-bridge-desktop@2x.webp 2x" width="1200" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/devil-bridge-tablet@1x.webp 1x, img/devil-bridge-tablet@2x.webp 2x" width="324" height="267">
+              <source type="image/webp" srcset="img/devil-bridge-mobile@1x.webp 1x, img/devil-bridge-mobile@2x.webp 2x" width="280" height="280">
+              <source media="(min-width: 1200px)" srcset="img/devil-bridge-desktop@1x.jpg 1x, img/devil-bridge-desktop@2x.jpg 2x" width="1200" height="400">
+              <source media="(min-width: 768px)" srcset="img/devil-bridge-tablet@1x.jpg 1x, img/devil-bridge-tablet@2x.jpg 2x" width="324" height="267">
+              <img class="card__image" src="img/devil-bridge-mobile@1x.jpg" srcset="img/devil-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола.">
+            </picture>
+            <div class="card__content">
+              <div class="card__content-wrapper">
+                <div class="card__text">
+                  <h3 class="card__title">Мост дьявола</h3>
+                  <p class="card__description">Автор фото: Антон</p>
+                </div>
+                <div class="card__icon-like">
+                  <div class="card__count-like-wrapper">
+                    <p class="card__count-like">254</p>
+                  </div>
+                  <span class="visually-hidden">Количество лайков.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="video">
+      <h2 class="visually-hidden">Посмотрите видео о Седоне.</h2>
+      <div class="video__wrapper">
+        <div class="video__text">
+          <h3 class="video__title">Все еще сомневаетесь?</h3>
+          <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <div class="video__content">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/presentation-video-desktop@1x.webp 1x, img/presentation-video-desktop@2x.webp 2x" width="800" height="500">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/presentation-video-tablet@1x.webp 1x, img/presentation-video-tablet@2x.webp 2x" width="648" height="500">
+            <source type="image/webp" srcset="img/presentation-video-mobile@1x.webp 1x, img/presentation-video-mobile@2x.webp 2x" width="280" height="177">
+            <source media="(min-width: 1200px)" srcset="img/presentation-video-desktop@1x.jpg 1x, img/presentation-video-desktop@2x.jpg 2x" width="800" height="500">
+            <source media="(min-width: 768px)" srcset="img/presentation-video-tablet@1x.jpg 1x, img/presentation-video-tablet@2x.jpg 2x" width="648" height="500">
+            <img class="video__image" src="img/presentation-video-mobile@1x.jpg" srcset="img/presentation-video-mobile@2x.jpg 2x" width="280" height="177" alt="Видеопрезентация Седоны.">
+          </picture>
+          <button class="video__button video__button--icon-play" type="button">
+            <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7"/>
+            </svg>
+            <span class="visually-hidden">Посмотреть видео.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper main-footer__catalog-wrapper">
+      <div class="main-footer__visit visit">
+        <a class="visit__link link-reset" href="#">#VISITSEDONA</a>
+      </div>
+      <div class="main-footer__social social">
+        <ul class="social__list list-reset">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Телеграме.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в Ютубе.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__developed developed">
+        <a class="developed__link-wrapper link-reset" href="https://t.me/htmlacademy">
+          <p class="developed__title">Разработано</p>
+          <svg class="developed__logo" width="27" height="35" viewBox="0 0 27 35" aria-label="Логотип Html Academy.">
+            <use href="img/sprite.svg#html-academy-logo"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/mobile-menu.js"></script>
+</body>
+</html>
