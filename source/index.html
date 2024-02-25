@@ -15,7 +15,7 @@
 <div class="body__wrapper">
   <header class="main-header">
     <a class="main-header__link logo link-reset" href="index.html">
-      <img class="logo__image logo__image--no-js" src="img/logo.svg" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
+      <img class="logo__image logo__image--no-js" src="img/sprite.svg#logo" width="185" height="96" alt="Логотип отеля. Надпись, город Седона на фоне гор в рамке.">
     </a>
     <nav class="main-navigation main-navigation--no-js main-navigation--closed">
       <div class="main-navigation__toggle-wrapper">
@@ -44,7 +44,7 @@
       <h1 class="visually-hidden">Отель Седона.</h1>
       <div class="intro__wrapper">
         <div class="intro__background-image">
-          <img class="intro__welcome-image" src="img/welcome.svg" width="282" height="214" alt="Приветствие Седоны на фоне гор.">
+          <img class="intro__welcome-image" src="img/sprite.svg#welcome" width="282" height="214" alt="Приветствие Седоны на фоне гор.">
         </div>
         <h2 class="intro__title ">Седона — небольшой&nbsp;<br class="intro__title-br">городок в АРИЗОНЕ,&nbsp;<br>заслуживающий большего!</h2>
         <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -65,34 +65,28 @@
             </div>
             <div class="advantages__sub-item advantages__sub-item--image">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/real-city-desktop@1x.webp 1x, img/real-city-desktop@2x.webp 2x" width="800" height="256">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/real-city-tablet@1x.webp 1x, img/real-city-tablet@2x.webp 2x" width="512" height="256">
+                <source type="image/webp" srcset="img/real-city-mobile@1x.webp 1x, img/real-city-mobile@2x.webp 2x" width="320" height="260">
                 <source media="(min-width: 1200px)" srcset="img/real-city-desktop@1x.jpg 1x, img/real-city-desktop@2x.jpg 2x" width="800" height="256">
                 <source media="(min-width: 768px)" srcset="img/real-city-tablet@1x.jpg 1x, img/real-city-tablet@2x.jpg 2x" width="512" height="256">
                 <img class="advantages__real-city" src="img/real-city-mobile@1x.jpg" srcset="img/real-city-mobile@2x.jpg 2x" width="320" height="260" alt="Отель на фоне сада и гор.">
               </picture>
             </div>
             <ul class="advantages__sub-list list-reset">
-              <li class="advantages__sub-list-item">
-                <div class="advantages__wrapper-icon">
-                  <span class="advantages__icon-home"></span>
-                </div>
+              <li class="advantages__sub-list-item advantages__sub-list-item--icon-home">
                 <div class="advantages__wrapper-text">
-                  <h3 class="advantages__title">Жильё</h3>
+                  <h3 class="advantages__title">Жилье</h3>
                   <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </div>
               </li>
-              <li class="advantages__sub-list-item">
-                <div class="advantages__wrapper-icon advantages__wrapper-icon-food">
-                  <span class="advantages__icon-food"></span>
-                </div>
+              <li class="advantages__sub-list-item advantages__sub-list-item--icon-food">
                 <div class="advantages__wrapper-text">
                   <h3 class="advantages__title advantages__title-food">Еда</h3>
                   <p class="advantages__description advantages__description-food">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,<br class="advantages__description-br"> Вы НЕ разочаруетесь!</p>
                 </div>
               </li>
-              <li class="advantages__sub-list-item">
-                <div class="advantages__wrapper-icon advantages__wrapper-icon-souvenir">
-                  <span class="advantages__icon-souvenir"></span>
-                </div>
+              <li class="advantages__sub-list-item advantages__sub-list-item--icon-souvenir">
                 <div class="advantages__wrapper-text">
                   <h3 class="advantages__title">Сувениры</h3>
                   <p class="advantages__description advantages__description-souvenir">Не только китайского,<br class="advantages__description-br"> но и местного производства!</p>
@@ -110,6 +104,9 @@
             </div>
             <div class="advantages__sub-item advantages__sub-item--image advantages__sub-item-bridge">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/bridge-desktop@1x.webp 1x, img/bridge-desktop@2x.webp 2x" width="800" height="256">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/bridge-tablet@1x.webp 1x, img/bridge-tablet@2x.webp 2x" width="512" height="256">
+                <source type="image/webp" srcset="img/bridge-mobile@1x.webp 1x, img/bridge-mobile@2x.webp 2x" width="320" height="260">
                 <source media="(min-width: 1200px)" srcset="img/bridge-desktop@1x.jpg 1x, img/bridge-desktop@2x.jpg 2x" width="800" height="256">
                 <source media="(min-width: 768px)" srcset="img/bridge-tablet@1x.jpg 1x, img/bridge-tablet@2x.jpg 2x" width="512" height="256">
                 <img class="advantages__bridge" src="img/bridge-mobile@1x.jpg" srcset="img/bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Горная природа Седоны с каньоном и деревьями.">
@@ -152,14 +149,17 @@
         <h3 class="search-hotel__title">Заинтересовались?</h3>
         <p class="search-hotel__description">Укажите предполагаемые даты поездки,<br class="search-hotel__description-br"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </div>
-      <div class="search-hotel__link-wrapper">
-        <a class="search-hotel__link button link-reset" href="#">Найти гостиницу</a>
+      <div class="search-hotel__button-wrapper">
+        <button class="search-hotel__button button" type="button">Найти гостиницу</button>
       </div>
     </section>
     <section class="position-on-map">
       <h2 class="visually-hidden">Карта расположения гостиницы Седона.</h2>
-      <div class="position-on-map__wrapper">
+      <div class="position-on-map__wrapper position-on-map__location-marker">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="1200" height="350">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="350">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="350">
           <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="1200" height="350">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="350">
           <img class="position-on-map__image-map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Наше расположение на карте.">
@@ -175,22 +175,29 @@
       <div class="main-footer__social social">
         <ul class="social__list list-reset">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте.</span></a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте.</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме.</span></a>
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Телеграме.</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе.</span></a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в Ютубе.</span>
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__developed developed">
-        <p class="developed__title">Разработано</p>
-        <span class="visually-hidden">Разработано в HTML Academy.</span>
-        <div class="developed__logo-wrapper">
-          <img class="developed__logo" src="img/html-academy-logo.svg" width="27" height="35" alt="Логотип Html Academy.">
-        </div>
+        <a class="developed__link-wrapper link-reset" href="https://t.me/htmlacademy">
+          <p class="developed__title">Разработано</p>
+          <svg class="developed__logo" width="27" height="35" viewBox="0 0 27 35" aria-label="Логотип Html Academy.">
+            <use href="img/sprite.svg#html-academy-logo"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>

@@ -1,4 +1,14 @@
-// Пока заглушка для Линтера что бы не было ошибок на пустой less
 .photo-review {
-  outline-color: transparent;
+  position: relative;
+}
+
+@media (max-width: @display-mobile-max) {
+  .photo-review::before {
+    content: "";
+    position: absolute;
+    bottom: -37px;
+    width: 100%;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
 }

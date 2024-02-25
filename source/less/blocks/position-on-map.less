@@ -1,3 +1,7 @@
+.position-on-map {
+  position: relative;
+}
+
 .position-on-map__image-map {
   width: 320px;
   object-fit: cover;
@@ -8,5 +12,37 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+  }
+}
+
+.position-on-map__location-marker {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 176px;
+    }
+  }
+
+  &::before {
+    background-color: #ffffff;
+  }
+
+  &::after {
+    width: 17px;
+    height: 17px;
+    background-color: #81b3d3;
   }
 }

@@ -1,19 +1,47 @@
 .developed__title {
-  max-width: 90px;
-  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 8px;
+  padding: 8px 46px 7px 14px;
   word-break: break-word;
 
+  @media (min-width: @tablet-width) {
+    padding: 15px 46px 7px 18px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-top: 7px;
+    padding-left: 16px;
   }
 }
 
-.developed__logo-wrapper {
+.developed__link-wrapper {
   display: flex;
-  max-width: 27px;
-  flex-direction: column;
+  position: relative;
   flex-wrap: wrap;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.developed__logo {
+  position: absolute;
+  top: 0;
+  right: 14px;
+
+  @media (min-width: @tablet-width) {
+    top: 6px;
+    right: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 7px;
+    right: 11px;
+  }
 }
