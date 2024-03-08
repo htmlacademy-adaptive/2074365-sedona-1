@@ -9,29 +9,32 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
-import {stacksvg} from "gulp-stacksvg";
+import {stacksvg} from 'gulp-stacksvg';
 import {deleteAsync} from 'del';
+import rename from 'gulp-rename';
 
-// Styles
-export const styles = () => {
-  return gulp.src('source/less/style.less', {sourcemaps: true})
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer(), csso()
-    ]))
-    .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
-    .pipe(browser.stream());
-}
 
-//Html
+//html compress
 const htmlMin = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
-//Scripts Js
+// Styles compress
+const styles = () => {
+  return gulp.src('source/less/style.less', {sourcemaps: true})
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(), csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
+    .pipe(browser.stream());
+}
+
+//Scripts compress
 const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
@@ -42,6 +45,17 @@ const scripts = () => {
 const copyImages = () => {
   return gulp.src('source/img/*.{jpg,png}')
     .pipe(gulp.dest('build/img'));
+}
+
+// Copy manifest, fonts, icon
+const copyFilesToBuild = (done) => {
+  gulp.src([
+      'source/fonts/*.{woff2,woff}',
+      'source/*.ico',
+      'source/manifest.webmanifest'],
+    {base: 'source'})
+    .pipe(gulp.dest('build'))
+  done();
 }
 
 // Svg compress
@@ -73,16 +87,6 @@ const createStack = () => {
     .pipe(svgo())
     .pipe(stacksvg({output: `sprite`}))
     .pipe(gulp.dest('build/img'))
-}
-
-//Copy Fonts and icon
-const copyFontsAndIco = (done) => {
-  gulp.src(['source/fonts/*.{woff2,woff}', 'source/*.ico'],
-    {
-      base: 'source'
-    })
-    .pipe(gulp.dest('build'))
-  done();
 }
 
 //Clean
@@ -119,8 +123,8 @@ const watcher = () => {
 //Build
 export const build = gulp.series(
   clean,
-  copyFontsAndIco,
   compressImages,
+  copyFilesToBuild,
 
   gulp.parallel(
     styles,
@@ -135,8 +139,9 @@ export const build = gulp.series(
 //Default
 export default gulp.series(
   clean,
-  copyFontsAndIco,
   copyImages,
+  copyFilesToBuild,
+
   gulp.parallel(
     styles,
     htmlMin,

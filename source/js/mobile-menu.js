@@ -6,11 +6,6 @@ logoImageElement.classList.remove('logo__image--no-js');
 mainNavigationClass.classList.remove('main-navigation--no-js');
 
 mainNavigationToggleElement.addEventListener('click', function () {
-  if (mainNavigationClass.classList.contains('main-navigation--closed')) {
-    mainNavigationClass.classList.remove('main-navigation--closed');
-    mainNavigationClass.classList.add('main-navigation--opened');
-  } else {
-    mainNavigationClass.classList.add('main-navigation--closed');
-    mainNavigationClass.classList.remove('main-navigation--opened');
-  }
+  mainNavigationClass.classList.toggle('main-navigation--closed');
+  mainNavigationClass.classList.toggle('main-navigation--opened');
 });
