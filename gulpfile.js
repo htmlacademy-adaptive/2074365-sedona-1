@@ -5,7 +5,6 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
-import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
@@ -13,13 +12,6 @@ import {stacksvg} from 'gulp-stacksvg';
 import {deleteAsync} from 'del';
 import rename from 'gulp-rename';
 
-
-//html compress
-const htmlMin = () => {
-  return gulp.src('source/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build'));
-}
 
 // Styles compress
 const styles = () => {
@@ -39,6 +31,12 @@ const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
+}
+
+// Copy html
+const copyHtml = () => {
+  return gulp.src('source/*.html')
+    .pipe(gulp.dest('build'));
 }
 
 // Copy origin images
@@ -117,7 +115,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(htmlMin, reload));
+  gulp.watch('source/*.html', gulp.series(copyHtml, reload));
 }
 
 //Build
@@ -127,8 +125,8 @@ export const build = gulp.series(
   copyFilesToBuild,
 
   gulp.parallel(
+    copyHtml,
     styles,
-    htmlMin,
     scripts,
     compressSvg,
     createStack,
@@ -143,8 +141,8 @@ export default gulp.series(
   copyFilesToBuild,
 
   gulp.parallel(
+    copyHtml,
     styles,
-    htmlMin,
     scripts,
     compressSvg,
     createStack,
