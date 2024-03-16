@@ -60,8 +60,7 @@
       <div class="advantages__wrapper">
         <ul class="advantages__list list-reset">
           <li class="advantages__item">
-            <div class="advantages__sub-item advantages__sub-item--background-blue">
-              <div class="advantages__divider-image"><span class="visually-hidden">Декоративный разделитель.</span></div>
+            <div class="advantages__sub-item advantages__divider-image advantages__sub-item--background-blue">
               <div class="advantages__text">
                 <h3 class="advantages__title advantages__title-city">Настоящий<br class="advantages__title-city-br"> городок</h3>
                 <p class="advantages__number">&mdash; №1 &mdash;</p>
@@ -154,21 +153,23 @@
         <h3 class="search-hotel__title">Заинтересовались?</h3>
         <p class="search-hotel__description">Укажите предполагаемые даты поездки,<br class="search-hotel__description-br"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </div>
-      <div class="search-hotel__button-wrapper">
-        <button class="search-hotel__button button" type="button">Найти гостиницу</button>
-      </div>
+      <a class="search-hotel__link search-hotel__link-style link-reset" href="#" target="_blank">Найти гостиницу</a>
     </section>
     <section class="position-on-map">
       <h2 class="visually-hidden">Карта расположения гостиницы Седона.</h2>
-      <div class="position-on-map__wrapper position-on-map__location-marker">
-        <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="1200" height="350">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="350">
-          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="350">
-          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="1200" height="350">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="350">
-          <img class="position-on-map__image-map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Наше расположение на карте.">
-        </picture>
+      <iframe class="position-on-map__interactive-map position-on-map__no-js" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1017910.6322861676!2d-112.46573759395048!3d34.74284987505328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da3c49068f8a1%3A0xaa8af137b4760b86!2sSedona%20Views%20Bed%20and%20Breakfast!5e0!3m2!1sru!2sru!4v1710584350109!5m2!1sru!2sru"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="position-on-map__static-map">
+          <span class="position-on-map__location-marker"></span>
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="1200" height="350">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="350">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="350">
+            <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="1200" height="350">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="350">
+            <img class="position-on-map__image-map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Наше расположение на карте.">
+          </picture>
       </div>
     </section>
   </main>
@@ -197,7 +198,7 @@
         </ul>
       </div>
       <div class="main-footer__developed developed">
-        <a class="developed__link-wrapper link-reset" href="https://t.me/htmlacademy">
+        <a class="developed__link-wrapper link-reset" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="developed__title">Разработано</p>
           <svg class="developed__logo" width="27" height="35" viewBox="0 0 27 35" aria-label="Логотип Html Academy.">
             <use href="img/sprite.svg#html-academy-logo"></use>
@@ -208,5 +209,6 @@
   </footer>
 </div>
 <script src="js/mobile-menu.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>
